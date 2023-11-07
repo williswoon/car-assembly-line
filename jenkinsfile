@@ -1,0 +1,30 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                dir('C:/Users/sqthwoon/Desktop/Jenkins/build.bat'){
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Users/sqthwoon/Desktop/Jenkins/build.bat'
+            }
+        }
+        stage('Test') {
+            steps {
+                dir('C:/Users/sqthwoon/Desktop/Jenkins/test.bat'){
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Users/sqthwoon/Desktop/Jenkins/test.bat'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                dir('C:/Users/sqthwoon/Desktop/Jenkins/deploy.bat'){
+                    /* execute commands in the scripts directory */
+                }
+                bat 'C:/Users/sqthwoon/Desktop/Jenkins/deploy.bat'
+            }
+        }
+    }
+}
